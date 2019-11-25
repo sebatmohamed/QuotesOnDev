@@ -9,22 +9,22 @@
     while( have_posts() ) :
         the_post(); ?>
     
-    <h2><?php the_title(); ?></h2>
-    <!-- <h3><?php the_permalink();?></h3> -->
     <?php the_content(); ?>
+    <h2><?php the_title(); ?></h2>
+
     
     <!-- Loop ends -->
     <?php endwhile;?>
 
+    <section>
+        <button id="quote-button">Generate New Quote</button>
     </section>
 
-    <button id="quote-button">Generate New Quote</button>
-
-    <!-- <?php the_posts_navigation();?> -->
 
 <?php else : ?>
         <p>No posts found</p>
 <?php endif;?>
 
-    
+</section>
+
 <?php get_footer();?>
