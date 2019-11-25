@@ -1,35 +1,24 @@
 /*
-Theme Name: Inhabitant
-Author: Rob H
-Description: A wicked theme I made.
+Theme Name: Quotes on Dev
+Author: Sebat Mohamed
+Description: A fun random dev quote generator.
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: inhabitant
+Text Domain: quotesondev
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
 
-@import 'abstracts/variables';
-@import 'abstracts/functions';
-@import 'abstracts/mixins';
+@import 'reset.scss';
 
-@import 'base/reset';
-@import 'base/typography';
+//contained within this are all your resets, variables, mixins and any utility classes.
+@import 'base.scss';
 
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
+//contains all the CSS that handles the layout, such as the container and any grid
+@import 'layout.scss';
 
-@import 'components/buttons';
-@import 'components/carousel';
-@import 'components/slider';
-
-@import 'pages/home';
-@import 'pages/about';
-@import 'pages/contact';
-@import 'pages/shop';
-
-@import 'themes/theme';
-@import 'themes/admin';
+//anything reusable such as buttons, navbars, cards, etc
+@import 'components.scss';
