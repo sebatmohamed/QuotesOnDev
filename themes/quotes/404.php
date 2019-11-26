@@ -1,5 +1,17 @@
 <?php get_header(); ?>
 
-<h1>You landed on a broken page</h1>
+<section class="error-page">
+
+<i class="fas fa-quote-left"></i>
+
+<div class="error-content">
+<h1>Oops!</h1>
+<p>It looks like nothing was found at this location. Maybe try a search?</p>
+</div>
+
+<i class="fas fa-quote-right"></i>
+
+</section>
+
 
 <?php get_footer();?>

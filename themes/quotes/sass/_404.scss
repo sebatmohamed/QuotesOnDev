@@ -1,0 +1,27 @@
+.error-page {
+    display: grid;
+    grid-template-columns: 1.25fr 2.5fr 1.25fr;
+    grid-template-rows: 1fr;
+
+    .error-content {
+        grid-column-start: 2;
+
+        h1, p, i {
+          grid-row-start: 1;
+        }
+    
+        h1 {
+          font-size: 45px;
+          padding-bottom: 30px;
+        }
+    
+        p {
+          font-size: 20px;
+    
+          span {
+            color: #00cc00;
+            font-style: italic;
+          }
+        }
+    }
+}

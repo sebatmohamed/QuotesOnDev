@@ -62,7 +62,16 @@ body {
   background: #222222;
   color: white;
   font-size: 16px;
-  height: 100vh; }
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 header a {
   display: grid;
@@ -70,28 +79,12 @@ header a {
   grid-template-rows: 1fr; }
   header a img {
     width: 80%;
-    grid-column-start: 2;
-    padding-top: 80px;
-    padding-bottom: 80px; }
+    grid-column-start: 2; }
 
 #quotes-content {
   display: grid;
   grid-template-columns: 1.25fr 2.5fr 1.25fr;
   grid-template-rows: 1fr; }
-  #quotes-content .fa-quote-right {
-    grid-column-start: 3;
-    color: #00cc00;
-    font-size: 100px;
-    text-align: center;
-    -webkit-transform: translateY(25%);
-            transform: translateY(25%); }
-  #quotes-content .fa-quote-left {
-    grid-column-start: 1;
-    color: #00cc00;
-    font-size: 100px;
-    text-align: center;
-    -webkit-transform: translateY(25%);
-            transform: translateY(25%); }
   #quotes-content div {
     grid-column-start: 2; }
     #quotes-content div h2,
@@ -107,6 +100,13 @@ header a {
       #quotes-content div h2 span {
         color: #00cc00;
         font-style: italic; }
+
+#submit-quote {
+  display: grid;
+  grid-template-columns: 1.25fr 2.5fr 1.25fr;
+  grid-template-rows: 1fr; }
+  #submit-quote div, #submit-quote form {
+    grid-column-start: 2; }
 
 footer {
   display: grid;
@@ -132,6 +132,23 @@ footer {
       text-decoration: none;
       color: white; }
 
+.error-page {
+  display: grid;
+  grid-template-columns: 1.25fr 2.5fr 1.25fr;
+  grid-template-rows: 1fr; }
+  .error-page .error-content {
+    grid-column-start: 2; }
+    .error-page .error-content h1, .error-page .error-content p, .error-page .error-content i {
+      grid-row-start: 1; }
+    .error-page .error-content h1 {
+      font-size: 45px;
+      padding-bottom: 30px; }
+    .error-page .error-content p {
+      font-size: 20px; }
+      .error-page .error-content p span {
+        color: #00cc00;
+        font-style: italic; }
+
 button {
   display: block;
   margin: 0 auto;
@@ -141,3 +158,19 @@ button {
   color: #00cc00;
   padding: 5px 15px;
   font-size: 20px; }
+
+.fa-quote-right {
+  grid-column-start: 3;
+  color: #00cc00;
+  font-size: 100px;
+  text-align: center;
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%); }
+
+.fa-quote-left {
+  grid-column-start: 1;
+  color: #00cc00;
+  font-size: 100px;
+  text-align: center;
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%); }

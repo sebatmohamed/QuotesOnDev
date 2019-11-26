@@ -3,6 +3,9 @@ body {
   color: white;
   font-size: 16px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 header a {
@@ -13,8 +16,6 @@ header a {
   img {
     width: 80%;
     grid-column-start: 2;
-    padding-top: 80px;
-    padding-bottom: 80px;
   }
 }
 
@@ -22,22 +23,6 @@ header a {
   display: grid;
   grid-template-columns: 1.25fr 2.5fr 1.25fr;
   grid-template-rows: 1fr;
-
-  .fa-quote-right {
-    grid-column-start: 3;
-    color: #00cc00;
-    font-size: 100px;
-    text-align: center;
-    transform: translateY(25%);
-  }
-
-  .fa-quote-left {
-    grid-column-start: 1;
-    color: #00cc00;
-    font-size: 100px;
-    text-align: center;
-    transform: translateY(25%);
-  }
 
   div {
       grid-column-start: 2;
@@ -63,6 +48,17 @@ header a {
       }
     }
   }
+}
+
+#submit-quote {
+  display: grid;
+  grid-template-columns: 1.25fr 2.5fr 1.25fr;
+  grid-template-rows: 1fr;
+
+  div, form {
+    grid-column-start: 2;
+  }
+
 }
 
 footer {

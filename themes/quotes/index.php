@@ -27,10 +27,11 @@
     <!-- Loop ends -->
     <?php endwhile;?>
 
-</section>
+    </section>
 
-    <button id="quote-button">Show Me Another!</button>
-
+    <section>
+        <button id="quote-button">Show Me Another!</button>
+    </section>
 
 <?php else : ?>
         <p>No posts found</p>
