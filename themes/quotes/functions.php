@@ -3,7 +3,8 @@
 //Adds script and stylesheets
 function quotes_files() {
     wp_enqueue_style('quotes_styles', get_stylesheet_uri('/build/css/style.min.css'), NULL, microtime());
-    wp_enqueue_style('fonts', "https://fonts.googleapis.com/css?family=Lato&display=swap");
+    wp_enqueue_style('fonts', "https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+    wp_enqueue_script('icons', "https://kit.fontawesome.com/2d0ec2a697.js");
 
     wp_enqueue_script('api_js', get_template_directory_uri() . '/js/api.js', array('jquery'), microtime(), true);
 

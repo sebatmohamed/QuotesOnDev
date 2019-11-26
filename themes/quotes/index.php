@@ -9,18 +9,27 @@
     while( have_posts() ) :
         the_post(); ?>
     
-    <i class="fas fa-quote-right"></i>
-    <?php the_content(); ?>
-    <h2><?php the_title(); ?></h2>
     <i class="fas fa-quote-left"></i>
-
     
+    <div>
+
+    <?php the_content(); ?>
+    <h2><?php echo the_title();?>
+        <?php foreach ( get_the_category() as $category ):?> 
+            <span><?php echo $category->name;?></span>
+        <?php endforeach;?>
+    </h2>
+
+    </div>
+    
+    <i class="fas fa-quote-right"></i>
+
     <!-- Loop ends -->
     <?php endwhile;?>
 
-    </section>
+</section>
 
-    <button id="quote-button">Generate New Quote</button>
+    <button id="quote-button">Show Me Another!</button>
 
 
 <?php else : ?>
