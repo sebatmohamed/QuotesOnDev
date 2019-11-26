@@ -20,6 +20,7 @@ Text Domain: quotesondev
 //contains all the CSS that handles the layout, such as the container and any grid
 @import 'layout.scss';
 @import '404.scss';
+@import 'submit.scss';
 
 //anything reusable such as buttons, navbars, cards, etc
 @import 'components.scss';

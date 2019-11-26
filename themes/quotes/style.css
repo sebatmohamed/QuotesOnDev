@@ -102,14 +102,6 @@ header {
         color: #00cc00;
         font-style: italic; }
 
-#submit-quote {
-  display: grid;
-  grid-template-columns: 1.25fr 2.5fr 1.25fr;
-  grid-template-rows: 1fr; }
-  #submit-quote div,
-  #submit-quote form {
-    grid-column-start: 2; }
-
 footer {
   height: 40px;
   display: grid;
@@ -152,17 +144,52 @@ footer {
         color: #00cc00;
         font-style: italic; }
 
-section {
+#submit-content {
+  display: grid;
+  grid-template-columns: 1.25fr 2.5fr 1.25fr; }
+  #submit-content h1,
+  #submit-content form,
+  #submit-content section {
+    grid-column-start: 2; }
+  #submit-content h1 {
+    font-size: 25px; }
+  #submit-content form {
+    padding-top: 20px; }
+    #submit-content form p, #submit-content form input {
+      padding-top: 20px; }
+    #submit-content form p {
+      padding-bottom: 10px; }
+    #submit-content form input, #submit-content form textarea {
+      border-color: #00cc00;
+      background: #222222; }
+    #submit-content form input {
+      width: 50%;
+      height: 5px; }
+    #submit-content form textarea {
+      width: 75%;
+      height: 70px; }
+
+.quote-button {
   display: block;
   margin: 0 auto;
   grid-column-start: 2;
   margin-top: -50px; }
-  section button {
+  .quote-button button {
     background: #222222;
     border-color: #00cc00;
     color: #00cc00;
     padding: 5px 15px;
     font-size: 20px; }
+
+.add-quote {
+  grid-column-start: 2;
+  padding-top: 20px; }
+  .add-quote button {
+    background: #222222;
+    border-color: #00cc00;
+    color: #00cc00;
+    padding: 5px 15px;
+    font-size: 16px; }
 
 .fa-quote-right {
   grid-column-start: 3;

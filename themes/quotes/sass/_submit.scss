@@ -1,0 +1,43 @@
+#submit-content {
+  display: grid;
+  grid-template-columns: 1.25fr 2.5fr 1.25fr;
+
+  h1,
+  form,
+  section {
+    grid-column-start: 2;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  form {
+    padding-top: 20px;
+
+    p, input {
+      padding-top: 20px;
+    }
+
+    p {
+      padding-bottom: 10px;
+    }
+
+    input, textarea {
+      border-color: #00cc00;
+      background: #222222;
+    }
+
+    input {
+      width: 50%;
+      height: 5px;
+    }
+
+    textarea {
+      width: 75%;
+      height: 70px;
+    }
+
+
+  }
+}

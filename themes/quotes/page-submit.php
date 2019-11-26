@@ -2,35 +2,34 @@
 
 <?php if( have_posts() ) :?>
 
-<section id="submit-quote">
+<section id="submit-content">
 
-<?php
-//The WordPress Loop: loads post content 
-    while( have_posts() ) :
-        the_post(); ?>
-    
-    <div>
-        <?php the_content(); ?>
-    </div>
-    
-    <!-- Loop ends -->
-    <?php endwhile;?>
-
-    </section>
-
+    <h1>Submit a Quote</h1>
 
     <form>
-        <input id="quote-title" type="text"/>
+        <p>Author of Quote</p>
+        <input type="text"/>
+
+        <p>Quote</p>
+        <textarea type="text"></textarea>
+
+        <p>Where did you find this quote? (e.g. book name)</p>
+        <input type="text"/>
+
+        <p>Provide the URL of the quote source, if available.</p>
+        <input type="text"/>
     </form>
-        
-    <section>
-        <button id="submit-button">Submit a Quote</button>
+
+    <section class="add-quote">
+        <button id="add-quote">Submit Quote</button>
     </section>
 
 
 <?php else : ?>
         <p>No posts found</p>
 <?php endif;?>
+
+</section>
 
 
 <?php get_footer();?>

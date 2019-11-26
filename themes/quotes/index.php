@@ -35,7 +35,7 @@
 
     </section>
 
-    <section>
+    <section class="quote-button">
         <button id="quote-button">Show Me Another!</button>
     </section>
 
