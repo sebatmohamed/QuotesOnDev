@@ -174,3 +174,8 @@ button {
   text-align: center;
   -webkit-transform: translateY(25%);
           transform: translateY(25%); }
+
+.loader-gif {
+  display: none;
+  width: 10%;
+  margin: auto; }

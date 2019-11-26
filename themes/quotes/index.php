@@ -2,6 +2,12 @@
 
 <?php if( have_posts() ) :?>
 
+    <img
+        src="<?php echo get_stylesheet_directory_uri();?>/assets/ajax-loader.gif"
+        alt="Loading..."
+        class="loader-gif"
+    />
+
 <section id="quotes-content">
 
 <?php
@@ -29,7 +35,7 @@
 
     </section>
 
-    <section>
+    <section></section>
         <button id="quote-button">Show Me Another!</button>
     </section>
 
