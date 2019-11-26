@@ -9,18 +9,23 @@
     while( have_posts() ) :
         the_post(); ?>
     
-    <i class="fas fa-quote-right"></i>
     <?php the_content(); ?>
     <h2><?php the_title(); ?></h2>
-    <i class="fas fa-quote-left"></i>
-
     
     <!-- Loop ends -->
     <?php endwhile;?>
 
     </section>
 
-    <button id="quote-button">Generate New Quote</button>
+
+    <form>
+        <input id="quote-title" type="text"/>
+    </form>
+    
+    
+    <section>
+        <button id="submit-button">Submit a Quote</button>
+    </section>
 
 
 <?php else : ?>

@@ -75,22 +75,26 @@ header {
 
 #quotes-content {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-auto-rows: 100px; }
-  #quotes-content h2, #quotes-content p, #quotes-content section {
+  grid-template-columns: 1fr 2fr 1fr; }
+  #quotes-content h2,
+  #quotes-content p,
+  #quotes-content section {
     grid-column-start: 2; }
   #quotes-content p {
     font-size: 45px; }
-  #quotes-content section {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    #quotes-content section button {
-      background: #222222;
-      border-color: #00cc00;
-      color: #00cc00;
-      padding: 5px 15px;
-      font-size: 20px; }
+  #quotes-content .fa-quote-right {
+    grid-column-start: 1;
+    color: #00cc00; }
+  #quotes-content .fa-quote-left {
+    grid-column-start: 3;
+    color: #00cc00; }
+
+button {
+  background: #222222;
+  border-color: #00cc00;
+  color: #00cc00;
+  padding: 5px 15px;
+  font-size: 20px; }
 
 footer {
   display: grid;

@@ -19,7 +19,29 @@
             $('#quotes-content').html(`<h2>${title}</h2>${content}`)
 
         })
+    })
 
+    $('#submit-button').on('click', function(event) {
+        const $title = $('#quote-title').val()
+        $('#quote-title').val('')
+
+        const data = {
+            title: $title
+        }
+
+
+        $.ajax({
+            method: 'POST',
+            url: wpApiSettings.root + 'wp/v2/posts',
+            data,
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('X-WP-NONCE', wpApiSettings.nonce)
+            }
+        })
 
     })
+
+
+
+
 })(jQuery);
