@@ -53,7 +53,6 @@
             quotesURL: $url
         }
 
-
         $.ajax({
             method: 'POST',
             url: qod_data.root_url + '/wp-json/wp/v2/posts',
@@ -61,6 +60,8 @@
             beforeSend: function(xhr) {
                 xhr.setRequestHeader('X-WP-NONCE', qod_data.nonce)
             }
+        }).always(function(data) {
+            $('#submit-content').html(`<h1>Thanks for submiting! Want to add another?</h1>`)
         })
 
     })
