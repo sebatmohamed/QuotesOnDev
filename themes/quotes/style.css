@@ -155,16 +155,17 @@ footer {
     font-size: 25px; }
   #submit-content form {
     padding-top: 20px; }
-    #submit-content form p, #submit-content form input {
-      padding-top: 20px; }
     #submit-content form p {
-      padding-bottom: 10px; }
+      padding-bottom: 5px;
+      padding-top: 20px; }
     #submit-content form input, #submit-content form textarea {
       border-color: #00cc00;
-      background: #222222; }
+      background: #222222;
+      color: white;
+      font-size: 15px; }
     #submit-content form input {
       width: 50%;
-      height: 5px; }
+      height: 20px; }
     #submit-content form textarea {
       width: 75%;
       height: 70px; }

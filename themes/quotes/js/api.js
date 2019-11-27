@@ -11,13 +11,14 @@
 
         $.ajax({
             method: 'GET', 
-            url: wpApiSettings.root + 'wp/v2/posts'
+            url: qod_data.root_url + '/wp-json/quotes/v1/post'
         }).done(function(data){
             $(".loader-gif").fadeOut(1000);
+            console.log(data)
             
             const randNum = Math.floor(Math.random() * data.length);
-            const title = data[randNum].title.rendered;
-            const content = data[randNum].content.rendered;
+            const title = data[randNum].title;
+            const content = data[randNum].content;
 
             setTimeout(() => {
                 $('#quotes-content').html(`<i class="fas fa-quote-left"></i>
@@ -31,21 +32,34 @@
         })
     })
 
-    $('#submit-button').on('click', function(event) {
-        const $title = $('#quote-title').val()
+    $('#add-quote').on('click', function(event) {
+        const $title = $('#quote-title').val();
         $('#quote-title').val('')
 
+        const $quote = $('#quote').val();
+        $('#quote').val('')
+
+        const $source = $('#quote-source').val();
+        $('#quote-source').val('')
+
+        const $url = $('#quote-url').val();
+        $('#quote-url').val('')
+
+
         const data = {
-            title: $title
+            title: $title,
+            content: $quote,
+            quotesSource: $source,
+            quotesURL: $url
         }
 
 
         $.ajax({
             method: 'POST',
-            url: wpApiSettings.root + 'wp/v2/posts',
+            url: qod_data.root_url + '/wp-json/wp/v2/posts',
             data,
             beforeSend: function(xhr) {
-                xhr.setRequestHeader('X-WP-NONCE', wpApiSettings.nonce)
+                xhr.setRequestHeader('X-WP-NONCE', qod_data.nonce)
             }
         })
 

@@ -8,16 +8,16 @@
 
     <form>
         <p>Author of Quote</p>
-        <input type="text"/>
+        <input id="quote-title" type="text"/>
 
         <p>Quote</p>
-        <textarea type="text"></textarea>
+        <textarea id="quote" type="text"></textarea>
 
         <p>Where did you find this quote? (e.g. book name)</p>
-        <input type="text"/>
+        <input id="quote-source" type="text"/>
 
         <p>Provide the URL of the quote source, if available.</p>
-        <input type="text"/>
+        <input id="quote-url" type="text"/>
     </form>
 
     <section class="add-quote">

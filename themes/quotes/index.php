@@ -26,6 +26,9 @@
         <?php endforeach;?>
     </h2>
 
+    <?php echo get_field('quote_source');?>
+    <?php echo get_field('quote_url');?>
+
     </div>
     
     <i class="fas fa-quote-right"></i>

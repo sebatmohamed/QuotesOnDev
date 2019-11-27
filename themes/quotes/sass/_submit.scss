@@ -15,29 +15,26 @@
   form {
     padding-top: 20px;
 
-    p, input {
-      padding-top: 20px;
-    }
-
     p {
-      padding-bottom: 10px;
+      padding-bottom: 5px;
+      padding-top: 20px;
     }
 
     input, textarea {
       border-color: #00cc00;
       background: #222222;
+      color: white;
+      font-size: 15px;
     }
 
     input {
       width: 50%;
-      height: 5px;
+      height: 20px;
     }
 
     textarea {
       width: 75%;
       height: 70px;
     }
-
-
   }
 }
