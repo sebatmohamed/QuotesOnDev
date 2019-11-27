@@ -52,8 +52,24 @@ header {
   }
 }
 
+#about-content {
+  display: grid;
+  grid-template-columns: 1.25fr 2.5fr 1.25fr;
+  grid-template-rows: 1fr;
+
+  div {
+    grid-column-start: 2;
+
+
+    h2 {
+      font-size: 20px;
+      padding-top: 20px;
+    }
+  }
+}
+
 footer {
-  height: 40px;
+  height: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 

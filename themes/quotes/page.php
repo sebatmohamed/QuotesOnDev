@@ -1,17 +1,23 @@
 <?php get_header(); ?>
 
+<section id="about-content">
+
 <?php if( have_posts() ) :
 //The WordPress Loop: loads post content 
     while( have_posts() ) :
         the_post(); ?>
-    
-    <h2><?php the_title(); ?></h2>
-    <?php the_content(); ?>
+
+    <div>
+        <h2><?php the_title(); ?></h2>
+        <?php the_content(); ?>
+    </div>
     
     <!-- Loop ends -->
     <?php endwhile;?>
 
-    <?php the_posts_navigation();?>
+</section>
+
+
 
 <?php else : ?>
         <p>No posts found</p>
