@@ -12,12 +12,6 @@ Custom functions that act indepedently of the theme template
 */
 require get_theme_file_path('/inc/extras.php');
 
-//Link source to active url
-
-function quotes_source_url() {
-    
-}
-
 //Adds script and stylesheets
 function quotes_files() {
     wp_enqueue_style('quotes_styles', get_stylesheet_uri('/build/css/style.min.css'), NULL, microtime());

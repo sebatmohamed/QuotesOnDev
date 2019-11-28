@@ -11,6 +11,8 @@
 
 <i class="fas fa-quote-right"></i>
 
+<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+
 </section>
 
 

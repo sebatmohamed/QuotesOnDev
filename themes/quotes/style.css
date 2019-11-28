@@ -149,10 +149,16 @@ footer {
       font-size: 45px;
       padding-bottom: 30px; }
     .error-page .error-content p {
-      font-size: 20px; }
+      font-size: 20px;
+      padding-bottom: 30px; }
       .error-page .error-content p span {
         color: #00cc00;
         font-style: italic; }
+  .error-page #ajaxsearchlite1 {
+    grid-column-start: 2;
+    width: 30%; }
+    .error-page #ajaxsearchlite1 .orig {
+      color: white; }
 
 #submit-content {
   display: grid;
