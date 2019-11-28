@@ -20,14 +20,10 @@
     <div>
 
     <?php the_content(); ?>
-    <h2><?php echo the_title();?>
-        <?php foreach ( get_the_category() as $category ):?> 
-            <span><?php echo $category->name;?></span>
-        <?php endforeach;?>
+    <h2>&mdash; <?php echo the_title();?>&comma;
+        <a class="source" href="<?php echo get_post_meta( get_the_ID(), '_qod_quote_source_url', true );?>"><span><?php echo get_post_meta( get_the_ID(), '_qod_quote_source', true );?></span></a>
     </h2>
 
-    <?php echo get_field('quote_source');?>
-    <?php echo get_field('quote_url');?>
 
     </div>
     

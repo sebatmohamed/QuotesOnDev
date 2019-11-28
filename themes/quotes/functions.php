@@ -2,19 +2,21 @@
 
 require get_theme_file_path('/inc/api-route.php');
 
-//Add custome fields to JSON API data
+/* 
+Custom metaboxes generates using the CMB2 library
+*/
+require get_theme_file_path('/inc/metaboxes.php');
 
-function qod_custom_rest() {
-    register_rest_field('post', 'quotesSource', array(
-        'get_callback' => function(){return get_field('quote_source');}
-    ));
+/* 
+Custom functions that act indepedently of the theme template
+*/
+require get_theme_file_path('/inc/extras.php');
 
-    register_rest_field('post', 'quotesURL', array(
-        'get_callback' => function(){return get_field('quote_url');}
-    ));
+//Link source to active url
+
+function quotes_source_url() {
+    
 }
-
-add_action('rest_api_init', 'qod_custom_rest');
 
 //Adds script and stylesheets
 function quotes_files() {
@@ -39,10 +41,11 @@ function qod_filter_home($query) {
     endif;
 }
 
+add_action('pre_get_posts', 'qod_filter_home');
+
+
 add_action('wp_enqueue_scripts', 'quotes_files');
 
-
-add_action('pre_get_posts', 'qod_filter_home');
 
 //Adds theme support - ex: title tag
 function quotes_features() {

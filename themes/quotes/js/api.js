@@ -14,11 +14,15 @@
             const randNum = Math.floor(Math.random() * data.length);
             const title = data[randNum].title;
             const content = data[randNum].content;
+            const source = data[randNum].quotesURL
+            const url = data[randNum].quotesSource
 
             $('#quotes-content').html(`<i class="fas fa-quote-left"></i>
                                         <div>
                                             ${content}
-                                            <h2>${title}</h2>
+                                            <h2>&mdash; ${title}&comma;
+                                                <a class="source" href="${url}"><span>${source}</span></a>
+                                            </h2>
                                         </div>
                                         <i class="fas fa-quote-right"></i>`)
            
@@ -27,23 +31,16 @@
 
     $('#add-quote').on('click', function(event) {
         const $title = $('#quote-title').val();
-        $('#quote-title').val('')
-
         const $quote = $('#quote').val();
-        $('#quote').val('')
-
         const $source = $('#quote-source').val();
-        $('#quote-source').val('')
-
         const $url = $('#quote-url').val();
-        $('#quote-url').val('')
 
 
         const data = {
             title: $title,
             content: $quote,
-            quotesSource: $source,
-            quotesURL: $url
+            _qod_quote_source: $source,
+            _qod_quote_source_url: $url
         }
 
         $.ajax({
@@ -58,8 +55,4 @@
         })
 
     })
-
-
-
-
 })(jQuery);
