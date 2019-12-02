@@ -2,19 +2,21 @@ body {
   background: #222222;
   color: white;
   font-size: 16px;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-self: center;
 }
 
 header {
   display: grid;
   grid-template-columns: 1.25fr 2.5fr 1.25fr;
   grid-template-rows: 1fr;
-  
+
   a {
     grid-column-start: 2;
+    margin-top: 30px;
+
     img {
       width: 80%;
     }
@@ -60,7 +62,6 @@ header {
   div {
     grid-column-start: 2;
 
-
     h2 {
       font-size: 40px;
       padding-bottom: 20px;
@@ -92,6 +93,44 @@ footer {
     a {
       text-decoration: none;
       color: white;
+    }
+  }
+}
+.search-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 2.5fr 1.25fr;
+
+  .search-results {
+    grid-column-start: 2;
+
+
+    hr {
+      margin-right: 100px;
+      border-top: #e1e1e1;
+    }
+
+    div {
+      h2 {
+        color: #00cc00;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        font-size: 22px;
+      }
+    }
+
+    .search-button {
+      display: flex;
+      padding-top: 40px;
+
+      p {
+        color: #00cc00;
+        font-size: 20px;
+        padding-right: 5px;
+      }
+
+      p:nth-child(1) {
+        color: white;
+      }
     }
   }
 }

@@ -62,7 +62,6 @@ body {
   background: #222222;
   color: white;
   font-size: 16px;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,14 +70,17 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-pack: distribute;
-      justify-content: space-around; }
+      justify-content: space-around;
+  -ms-flex-item-align: center;
+      align-self: center; }
 
 header {
   display: grid;
   grid-template-columns: 1.25fr 2.5fr 1.25fr;
   grid-template-rows: 1fr; }
   header a {
-    grid-column-start: 2; }
+    grid-column-start: 2;
+    margin-top: 30px; }
     header a img {
       width: 80%; }
 
@@ -138,6 +140,31 @@ footer {
     footer .footer-content a {
       text-decoration: none;
       color: white; }
+
+.search-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 2.5fr 1.25fr; }
+  .search-grid .search-results {
+    grid-column-start: 2; }
+    .search-grid .search-results hr {
+      margin-right: 100px;
+      border-top: #e1e1e1; }
+    .search-grid .search-results div h2 {
+      color: #00cc00;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      font-size: 22px; }
+    .search-grid .search-results .search-button {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding-top: 40px; }
+      .search-grid .search-results .search-button p {
+        color: #00cc00;
+        font-size: 20px;
+        padding-right: 5px; }
+      .search-grid .search-results .search-button p:nth-child(1) {
+        color: white; }
 
 .error-page {
   display: grid;
