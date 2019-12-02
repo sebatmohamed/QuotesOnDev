@@ -33,7 +33,7 @@ if ( is_user_logged_in() ) {?>
     <section id="login">
         <h1>Submit a Quote</h1>
         <h3> Sorry, you must be logged in to submit a quote!</h3>
-        <a href="">
+        <a href="http://localhost:8888/quotesOnDev/wp-login.php?redirect_to=http%3A%2F%2Flocalhost%3A8888%2FquotesOnDev%2Fwp-admin%2F&reauth=1">
             <h4>Click here to login.</h4>
         </a>
     </section>
