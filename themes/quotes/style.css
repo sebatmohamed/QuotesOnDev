@@ -109,8 +109,10 @@ header {
   #about-content div {
     grid-column-start: 2; }
     #about-content div h2 {
-      font-size: 20px;
-      padding-top: 20px; }
+      font-size: 40px;
+      padding-bottom: 20px; }
+    #about-content div p:nth-child(1) {
+      padding-bottom: 20px; }
 
 footer {
   height: 20px;
@@ -157,8 +159,6 @@ footer {
   .error-page #ajaxsearchlite1 {
     grid-column-start: 2;
     width: 30%; }
-    .error-page #ajaxsearchlite1 .orig {
-      color: white; }
 
 #submit-content {
   display: grid;
@@ -185,6 +185,22 @@ footer {
     #submit-content form textarea {
       width: 75%;
       height: 70px; }
+
+#login {
+  display: grid;
+  grid-template-columns: 1.25fr 2.5fr 1.25fr; }
+  #login h1, #login h3, #login a {
+    grid-column-start: 2; }
+  #login h1 {
+    font-size: 35px;
+    padding-bottom: 25px; }
+  #login h3, #login a {
+    font-size: 25px; }
+  #login h3 {
+    padding-bottom: 25px; }
+  #login a {
+    color: #00cc00;
+    text-decoration: none; }
 
 .quote-button {
   display: block;

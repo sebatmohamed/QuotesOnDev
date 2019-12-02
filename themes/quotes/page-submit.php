@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<?php if( have_posts() ) :?>
+<?php
+if ( is_user_logged_in() ) {?>
 
 <section id="submit-content">
 
@@ -24,12 +25,19 @@
         <button id="add-quote">Submit Quote</button>
     </section>
 
-
-<?php else : ?>
-        <p>No posts found</p>
-<?php endif;?>
-
 </section>
 
+<?php 
+} else {?>
+    
+    <section id="login">
+        <h1>Submit a Quote</h1>
+        <h3> Sorry, you must be logged in to submit a quote!</h3>
+        <a href="">
+            <h4>Click here to login.</h4>
+        </a>
+    </section>
+
+<?php }?>
 
 <?php get_footer();?>

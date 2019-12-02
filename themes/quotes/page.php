@@ -9,15 +9,15 @@
 
     <div>
         <h2><?php the_title(); ?></h2>
-        <?php the_content(); ?>
+        <main>
+            <?php the_content(); ?>
+        </main>
     </div>
     
     <!-- Loop ends -->
     <?php endwhile;?>
 
 </section>
-
-
 
 <?php else : ?>
         <p>No posts found</p>

@@ -38,3 +38,31 @@
     }
   }
 }
+
+#login {
+  display: grid;
+  grid-template-columns: 1.25fr 2.5fr 1.25fr;
+
+  h1, h3, a {
+    grid-column-start: 2;
+  }
+
+  h1 {
+    font-size: 35px;
+    padding-bottom: 25px;
+  }
+
+  h3, a {
+    font-size: 25px;
+  }
+
+  h3 {
+    padding-bottom: 25px;
+  }
+
+  a {
+    color: #00cc00;
+    text-decoration: none;
+  }
+}
+
